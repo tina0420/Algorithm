@@ -7,8 +7,10 @@ public class BubbleSort {
 		for (int k=0; k<data.length; k++) {
 			System.out.print(data[k]+ " ");
 		}
+		System.out.println();
 		//法一
-		for (int i=0; i < data.length; i++) {
+		for (int i=0; i < data.length-1; i++) {
+			System.out.println("第"+(i+1)+"次排列");
 			//跑 n-1 次
 			for (int j=0; j < data.length-1; j++) {
 				if(data[j] > data[j+1]) {
@@ -17,7 +19,12 @@ public class BubbleSort {
 					data[j] = data [j+1];
 					data[j+1] = tmp;
 				}
+
 			}
+			for(int k=0; k < data.length; k++) {
+				System.out.print(data[k]+" ");
+			}
+			System.out.println();
 		}
 		//法二
 //		for (int i=0; i<=data.length-1; i++) {
